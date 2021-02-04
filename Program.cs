@@ -46,6 +46,7 @@ namespace First_things_First
                                 Console.WriteLine();
                                 Console.WriteLine();
                                 Console.WriteLine("[A] Roll Again");
+                                Console.WriteLine();
                                 Console.WriteLine("[<] Return to the previous Menu");
                                 resp = Console.ReadLine();
                                 resp = resp.ToLower();
@@ -222,6 +223,10 @@ namespace First_things_First
             Random dice = new Random();
             int roll = dice.Next(1, num_face);
             return roll;
+        }
+        
+        static void NpcGenerator()
+        {
         }
     }
 }
