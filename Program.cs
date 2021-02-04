@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,10 +13,10 @@ namespace First_things_First
             bool key = true;
             do
             {
-                
+
                 bool key1 = true;
                 bool key2 = true;
-                
+
                 Console.WriteLine("Hello There! What do you want to do today? Please, write the letter of the menu you want to visit and then, hit Enter");
                 Console.WriteLine("[A] Magic Menu");
                 Console.WriteLine("[B] RPG Menu");
@@ -28,7 +28,7 @@ namespace First_things_First
 
                 if (resp == "a")
                 {
-                    
+
                     do
                     {
                         Console.WriteLine("Welcome to your Magic Menu! What can I do for you today?");
@@ -60,33 +60,33 @@ namespace First_things_First
                             }
                             while (resp != "<");
 
-                            
+
                         }
-                        else if (resp == "<" )
+                        else if (resp == "<")
                         {
                             key1 = false;
                             Console.Clear();
                         }
-                        else 
+                        else
                         {
                             Console.WriteLine("Oops, didin't found this option. Try again please.");
                             Console.Clear();
                         }
-                       
+
                     }
                     while (key1);
-                   
+
                 }
                 else if (resp == "b")
                 {
                     do
                     {
-                        
+
                         Console.WriteLine("Welcome, welcome! Tell-me, what do you want today?");
                         Console.WriteLine("[A] Roll a die");
                         Console.WriteLine();
                         Console.WriteLine("[<] Return to previous Menu");
-                        
+
                         resp = Console.ReadLine();
                         resp = resp.ToLower();
                         Console.Clear();
@@ -107,7 +107,7 @@ namespace First_things_First
                                 Console.WriteLine("[<] Return to previous Menu");
                                 int[] die_num = { 0, 5, 7, 9, 11, 13, 21, 101 }; //0 is set as first index to become more easy to "navigate" trought the array using the player's given number. the number of faces of each die needed to be increased by 1 to the random() works correctly
                                 var input_die = Console.ReadLine();
-                                bool is_num =  int.TryParse(input_die,out int d_face); //identifies if the character the user entered is a number. If don't, is_num will become false. Otherway d_face recieves the number
+                                bool is_num = int.TryParse(input_die, out int d_face); //identifies if the character the user entered is a number. If don't, is_num will become false. Otherway d_face recieves the number
 
                                 int result;
                                 int die;
@@ -118,6 +118,8 @@ namespace First_things_First
                                     {
                                         do
                                         {
+                                            Console.WriteLine("Actual die: d" + (die_num[d_face]-1));
+                                            Console.WriteLine();
                                             result = DiceRoller(die_num[d_face]);
                                             Console.WriteLine(result);
                                             Console.WriteLine();
@@ -132,14 +134,15 @@ namespace First_things_First
 
                                     }
                                     else if (d_face == 8)
-                                    {                                 
+                                    {
                                         do
                                         {
                                             Console.Write("Well, enter a value:");
                                             result = Convert.ToInt32(Console.ReadLine());
+                                            Console.Clear();
                                             do
                                             {
-                                                Console.WriteLine("Actual die: d"+result);
+                                                Console.WriteLine("Actual die: d" + result);
                                                 Console.WriteLine();
                                                 die = DiceRoller(result + 1);
                                                 Console.WriteLine(die);
@@ -153,7 +156,7 @@ namespace First_things_First
 
                                             }
                                             while (resp == "a");
-                                             
+
                                         }
                                         while (resp != "<");
 
@@ -174,8 +177,8 @@ namespace First_things_First
                                 Console.Clear();
                             }
                             while (key2);
-                            
-                            
+
+
                         }
                         else if (resp == "<")
                         {
@@ -224,9 +227,10 @@ namespace First_things_First
             int roll = dice.Next(1, num_face);
             return roll;
         }
-        
+
         static void NpcGenerator()
         {
+            string[] character = {"one char"};
         }
     }
 }
