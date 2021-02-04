@@ -230,7 +230,8 @@ namespace First_things_First
 
         static void NpcGenerator()
         {
-            string[] character = {"one char"};
+            string[] char_class = {"Barbarian", "Bard", "Claric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"};
+            string[] char_personality = { };
         }
     }
 }
