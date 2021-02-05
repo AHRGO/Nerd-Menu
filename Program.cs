@@ -254,7 +254,7 @@ namespace First_things_First
             int race = rand.next(char_race.length);
             int clas = rand.next(char_class.length);
             int bg = rand.next(char_class.legth);
-            console.WriteLine(+ name[npc_nameM] + "is an" + race[char_race] + "of the" + class[npc_class] + "class");
+            console.WriteLine(+ name[npc_nameM] + "is an" + race[char_race] + "of the" + clas[npc_class] + "class");
         }
     }
 }
