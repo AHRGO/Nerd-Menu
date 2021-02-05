@@ -252,7 +252,7 @@ namespace First_things_First
             Random rand = new Random();
             int name = rand.next(char_nameM.length);
             int race = rand.next(char_race.length);
-            int class = rand.next(char_class.length);
+            int clas = rand.next(char_class.length);
             int bg = rand.next(char_class.legth);
             console.WriteLine(+ name[npc_nameM] + "is an" + race[char_race] + "of the" + class[npc_class] + "class");
         }
