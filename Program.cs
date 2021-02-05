@@ -246,8 +246,15 @@ namespace First_things_First
             string[] char_nameF = {"Lidda", "Flaxeria", "Grace", "Misty Kimura", "Naias", "Sunny", "Kameko Gushiken",
                                    "Cecil", "Sylvia", "Geraldine", "Persephone", "Althea", "Sylvi Drakkendottir", "Aurora",
                                    "Monisette Fontaine", "Winnie", "Hannah", "Aradia", "Efrah", "Anna", "Julia Selyn-Stirling" };
-            string[] char_Background = {"Acólito", "Artesão de Guilda", "Artista", "Charlatão", "Criminoso", "Eremita",
-                                        "Forasteiro", "Héroi do Povo", "Marinheiro", "Nobre Órfão", "Sábio Soldado" };
+            string[] char_Background = {"Acolyte", "Guild Craftsman", "Artist", "Charlatan", "Criminal", "Hermit",
+                                         "Outsider", "People's Hero", "Sailor", "Noble Orphan", "Wise Soldier"};
+            
+            Random rand = new Random();
+            int name = rand.next(char_nameM.length);
+            int race = rand.next(char_race.length);
+            int class = rand.next(char_class.length);
+            int bg = rand.next(char_class.legth);
+            console.WriteLine(+ name[npc_nameM] + "is an" + race[char_race] + "of the" + class[npc_class] + "class");
         }
     }
 }
