@@ -231,7 +231,7 @@ namespace First_things_First
         static void NpcGenerator()
         {
             string[] char_class = {"Barbarian", "Bard", "Claric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"};
-            string[] char_personality = { };
+            string[] char_personality = {"Leal e Bom", "Neutro e Bom", "Caótico e Bom", "Leal e Neutro", "Neutro", "Caótico e Neutro", "Leal e Mau", "Caótico e Mau"};
             string[] char_race = {"Dragonborn", "Dwarf", "Elf", "Gnome", "Half-Elf", "halfling", "Half-Orc",
                 "Human", "Tiefling", "Leonin (Furry :3)", "Satyr", "Aasimar", "Bugbear", "Goblin",
                 "Kobold", "Lizardfolk", "Orc", "Triton", "Warforged", "Centaur", "Loxodon", "Minotaur",
@@ -246,8 +246,8 @@ namespace First_things_First
             string[] char_nameF = {"Lidda", "Flaxeria", "Grace", "Misty Kimura", "Naias", "Sunny", "Kameko Gushiken",
                                    "Cecil", "Sylvia", "Geraldine", "Persephone", "Althea", "Sylvi Drakkendottir", "Aurora",
                                    "Monisette Fontaine", "Winnie", "Hannah", "Aradia", "Efrah", "Anna" };
-            string[] char_profession = { };
-            string[] char_Background = { };
+            string[] char_Background = {"Acólito", "Artesão de Guilda", "Artista", "Charlatão", "Criminoso", "Eremita",
+                                        "Forasteiro", "Héroi do Povo", "Marinheiro", "Nobre Órfão", "Sábio Soldado" };
         }
     }
 }
