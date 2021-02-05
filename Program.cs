@@ -245,7 +245,7 @@ namespace First_things_First
                                    "Berley", "Mimus Mulrian", "Vladislak Whitebrows", "Ianorin Chergoba" };
             string[] char_nameF = {"Lidda", "Flaxeria", "Grace", "Misty Kimura", "Naias", "Sunny", "Kameko Gushiken",
                                    "Cecil", "Sylvia", "Geraldine", "Persephone", "Althea", "Sylvi Drakkendottir", "Aurora",
-                                   "Monisette Fontaine", "Winnie", "Hannah", "Aradia", "Efrah", "Anna", "", "", "", "", "", "", "", "", "", "", "", "" }
+                                   "Monisette Fontaine", "Winnie", "Hannah", "Aradia", "Efrah", "Anna" };
             string[] char_profession = { }
             string[] char_Background = { }
         }
