@@ -216,9 +216,9 @@ namespace First_things_First
                 "Naya (White + Red + Green)", "Sultai (Blue + Black + Green)", "Temur(Blue + Red + Green)",
                 "Glint (No White)", "Dune (No Blue)", "Ink (No Black)", "Witch (No Red)", "Yore (No Green)", "Penta Color" };
 
-            Random rand = new Random();
-            int mtg_index = rand.Next(colors.Length);
-            Console.WriteLine("I think that today you must do a " + colors[mtg_index] + " deck");
+            Random rand = new Random(); //instancia o objeto random. rand é o nome da "váriavel". Meio que "liga" essa variável ao comando pronto de random dentro do sistema
+            int mtg_index = rand.Next(colors.Length); //mtg index vai receber o valor randômico no total de coisas (.Length conta tudo que tem no array).
+            Console.WriteLine("I think that today you must do a " + colors[mtg_index] + " deck"); //escreve e cocatena. mostrando o array na posição randomizada;
         }
 
         static int DiceRoller(int num_face)
