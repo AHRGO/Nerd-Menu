@@ -246,8 +246,8 @@ namespace First_things_First
             string[] char_nameF = {"Lidda", "Flaxeria", "Grace", "Misty Kimura", "Naias", "Sunny", "Kameko Gushiken",
                                    "Cecil", "Sylvia", "Geraldine", "Persephone", "Althea", "Sylvi Drakkendottir", "Aurora",
                                    "Monisette Fontaine", "Winnie", "Hannah", "Aradia", "Efrah", "Anna" };
-            string[] char_profession = { }
-            string[] char_Background = { }
+            string[] char_profession = { };
+            string[] char_Background = { };
         }
     }
 }
