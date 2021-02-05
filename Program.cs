@@ -233,9 +233,9 @@ namespace First_things_First
             string[] char_class = {"Barbarian", "Bard", "Claric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"};
             string[] char_personality = {"Leal e Bom", "Neutro e Bom", "Caótico e Bom", "Leal e Neutro", "Neutro", "Caótico e Neutro", "Leal e Mau", "Caótico e Mau"};
             string[] char_race = {"Dragonborn", "Dwarf", "Elf", "Gnome", "Half-Elf", "halfling", "Half-Orc",
-                "Human", "Tiefling", "Leonin (Furry :3)", "Satyr", "Aasimar", "Bugbear", "Goblin",
-                "Kobold", "Lizardfolk", "Orc", "Triton", "Warforged", "Centaur", "Loxodon", "Minotaur",
-                "Simic Hybrid", "Simic Hybrid", "Vedalken" };
+                                  "Human", "Tiefling", "Leonin (Furry :3)", "Satyr", "Aasimar", "Bugbear", "Goblin",
+                                  "Kobold", "Lizardfolk", "Orc", "Triton", "Warforged", "Centaur", "Loxodon", "Minotaur",
+                                  "Simic Hybrid", "Simic Hybrid", "Vedalken" };
             string[] char_nameM = {"Victor Vindicant", "Ammon", "Orgrin", "Kallistus", "Owain", "Aranel",
                                    "Sir Gelid Ebonheart", "Hugo", "Sketch", "Pog", "Zhakir", "Draimen Black",
                                    "Morgan Brooks", "Balthazar", "Goran", "Dragomir", "Jonh Smith", "Balasar Clockson",
@@ -245,7 +245,7 @@ namespace First_things_First
                                    "Berley", "Mimus Mulrian", "Vladislak Whitebrows", "Ianorin Chergoba" };
             string[] char_nameF = {"Lidda", "Flaxeria", "Grace", "Misty Kimura", "Naias", "Sunny", "Kameko Gushiken",
                                    "Cecil", "Sylvia", "Geraldine", "Persephone", "Althea", "Sylvi Drakkendottir", "Aurora",
-                                   "Monisette Fontaine", "Winnie", "Hannah", "Aradia", "Efrah", "Anna" };
+                                   "Monisette Fontaine", "Winnie", "Hannah", "Aradia", "Efrah", "Anna", "Julia Selyn-Stirling" };
             string[] char_Background = {"Acólito", "Artesão de Guilda", "Artista", "Charlatão", "Criminoso", "Eremita",
                                         "Forasteiro", "Héroi do Povo", "Marinheiro", "Nobre Órfão", "Sábio Soldado" };
         }
