@@ -195,7 +195,7 @@ namespace First_things_First
                                 if (npc == "a")
                                 {
                                     Console.WriteLine("");
-                                    NpcGenerator(npc);
+                                    NpcGenerator("she");
                                     Console.ReadLine();
                                     Console.Clear();
 
@@ -203,7 +203,7 @@ namespace First_things_First
                                 else if (npc == "b")
                                 {
                                     Console.WriteLine("");
-                                    NpcGenerator(npc);
+                                    NpcGenerator("he");
                                     Console.ReadLine();
                                     Console.Clear();
                                 }
@@ -304,14 +304,15 @@ namespace First_things_First
             string[] char_background = {"Acolyte", "Guild Craftsman", "Artist", "Charlatan", "Criminal", "Hermit",
                                          "Outsider", "People's Hero", "Sailor", "Noble Orphan", "Wise Soldier"};
             int name;
-            string sex;
+            //string sex;
             Random rand = new Random();
             int race = rand.Next(char_race.Length);
             int clas = rand.Next(char_class.Length);
             int bg = rand.Next(char_background.Length);
             int pers = rand.Next(char_personality.Length);
+            Console.WriteLine(gender + " is an " + char_race[race] + " of the " + char_class[clas] + " class \n" + char_background[bg]);
 
-            if (gender == "a")
+            /*if (gender == "a")
             {
                  name = rand.Next(char_nameF.Length);
                 sex = char_nameF[name];
@@ -322,7 +323,7 @@ namespace First_things_First
                  name = rand.Next(char_nameM.Length);
                 sex = char_nameM[name];
                 Console.WriteLine(sex + " is an " + char_race[race] + " of the " + char_class[clas] + " class \n" + char_background[bg]);
-            }
+            }*/
             //int race = rand.Next(char_race.Length);
             //int clas = rand.Next(char_class.Length);
             //int bg = rand.Next(char_background.Length);
