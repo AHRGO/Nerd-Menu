@@ -13,10 +13,10 @@ namespace First_things_First
             bool key = true;
             do
             {
-                
+
                 bool key1 = true;
                 bool key2 = true;
-                
+
                 Console.WriteLine("Hello There! What do you want to do today? Please, write the letter of the menu you want to visit and then, hit Enter");
                 Console.WriteLine("[A] Magic Menu");
                 Console.WriteLine("[B] RPG Menu");
@@ -25,11 +25,11 @@ namespace First_things_First
                 string resp = Console.ReadLine();
                 resp = resp.ToLower();
                 Console.Clear();
-                
+
 
                 if (resp == "a")
                 {
-                    
+
                     do
                     {
                         Console.WriteLine("Welcome to your Magic Menu! What can I do for you today?");
@@ -60,33 +60,33 @@ namespace First_things_First
                             }
                             while (resp != "<");
 
-                            
+
                         }
-                        else if (resp == "<" )
+                        else if (resp == "<")
                         {
                             key1 = false;
                             Console.Clear();
                         }
-                        else 
+                        else
                         {
                             Console.WriteLine("Oops, didin't found this option. Try again please.");
                             Console.Clear();
                         }
-                       
+
                     }
                     while (key1);
-                   
+
                 }
                 else if (resp == "b")
                 {
                     do
                     {
-                        
+
                         Console.WriteLine("Welcome, welcome! Tell-me, what do you want today?");
                         Console.WriteLine("[A] Roll a die");
                         Console.WriteLine("[B] NPC Generator");
                         Console.WriteLine();
-                        Console.WriteLine("[<] Return to previous Menu");                   
+                        Console.WriteLine("[<] Return to previous Menu");
                         resp = Console.ReadLine();
                         resp = resp.ToLower();
                         Console.Clear();
@@ -107,7 +107,7 @@ namespace First_things_First
                                 Console.WriteLine("[<] Return to previous Menu");
                                 int[] die_num = { 0, 5, 7, 9, 11, 13, 21, 101 }; //0 is set as first index to become more easy to "navigate" trought the array using the player's given number. the number of faces of each die needed to be increased by 1 to the random() works correctly
                                 var input_die = Console.ReadLine();
-                              
+
                                 bool is_num = int.TryParse(input_die, out int d_face); //identifies if the character the user entered is a number. If don't, is_num will become false. Otherway d_face recieves the number
 
                                 int result;
@@ -186,7 +186,7 @@ namespace First_things_First
                                 Console.WriteLine("Choose you NPC Gender: ");
                                 Console.WriteLine("[A] Female npc");
                                 Console.WriteLine("[B] Male Npc");
-                                Console.WriteLine("[C] Random");    
+                                Console.WriteLine("[C] Random");
                                 Console.WriteLine("[<] Return to previous Menu");
                                 string npc = Console.ReadLine();
                                 npc.ToLower();
@@ -195,7 +195,7 @@ namespace First_things_First
                                 if (npc == "a")
                                 {
                                     Console.WriteLine("");
-                                    NpcGenerator("she");
+                                    NpcGenerator("She");
                                     Console.ReadLine();
                                     Console.Clear();
 
@@ -203,13 +203,15 @@ namespace First_things_First
                                 else if (npc == "b")
                                 {
                                     Console.WriteLine("");
-                                    NpcGenerator("he");
+                                    NpcGenerator("He");
                                     Console.ReadLine();
                                     Console.Clear();
                                 }
                                 else if (npc == "c")
                                 {
-                                    Console.WriteLine("Isso msm");
+                                    int rand_sex = DiceRoller(3); //2+1, DiceRoller begins in 1;
+                                    string[] sex = {"0", "She", "He" }; //0 is here because DiceRoller generate a random number between 1 and x;
+                                    NpcGenerator(sex[rand_sex]);
                                     Console.ReadLine();
                                     Console.Clear();
                                 }
@@ -227,7 +229,7 @@ namespace First_things_First
 
                             }
                             while (key2);
-                           
+
 
                         }
 
@@ -240,7 +242,7 @@ namespace First_things_First
                     }
                     while (key1);
                 }
-                
+
                 else if (resp == "x")
                 {
                     key = false;
@@ -280,7 +282,7 @@ namespace First_things_First
             return roll;
         }
 
-        
+
 
         static void NpcGenerator(string gender)
         {
@@ -303,7 +305,7 @@ namespace First_things_First
                                    "Monisette Fontaine", "Winnie", "Hannah", "Aradia", "Efrah", "Anna", "Julia Selyn-Stirling" };
             string[] char_background = {"Acolyte", "Guild Craftsman", "Artist", "Charlatan", "Criminal", "Hermit",
                                          "Outsider", "People's Hero", "Sailor", "Noble Orphan", "Wise Soldier"};
-            int name;
+            //int name;
             //string sex;
             Random rand = new Random();
             int race = rand.Next(char_race.Length);
