@@ -194,23 +194,20 @@ namespace First_things_First
 
                                 if (npc == "a")
                                 {
-                                    Console.WriteLine("");
-                                    NpcGenerator("She");
+                                    NpcGenerator("f");
                                     Console.ReadLine();
                                     Console.Clear();
-
                                 }
                                 else if (npc == "b")
                                 {
-                                    Console.WriteLine("");
-                                    NpcGenerator("He");
+                                    NpcGenerator("m");
                                     Console.ReadLine();
                                     Console.Clear();
                                 }
                                 else if (npc == "c")
                                 {
                                     int rand_sex = DiceRoller(3); //2+1, DiceRoller begins in 1;
-                                    string[] sex = {"0", "She", "He" }; //0 is here because DiceRoller generate a random number between 1 and x;
+                                    string[] sex = {"0", "f", "m" }; //0 is here because DiceRoller generate a random number between 1 and x;
                                     NpcGenerator(sex[rand_sex]);
                                     Console.ReadLine();
                                     Console.Clear();
@@ -286,7 +283,7 @@ namespace First_things_First
 
         static void NpcGenerator(string gender)
         {
-            string[] char_class = { "Barbarian", "Bard", "Claric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard" };
+            string[] char_class = { "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard" };
             string[] char_personality = { "Leal e Bom", "Neutro e Bom", "Caótico e Bom", "Leal e Neutro", "Neutro", "Caótico e Neutro", "Leal e Mau", "Caótico e Mau" };
             string[] char_race = {"Dragonborn", "Dwarf", "Elf", "Gnome", "Half-Elf", "halfling", "Half-Orc",
                                   "Human", "Tiefling", "Leonin (Furry :3)", "Satyr", "Aasimar", "Bugbear", "Goblin",
@@ -305,32 +302,26 @@ namespace First_things_First
                                    "Monisette Fontaine", "Winnie", "Hannah", "Aradia", "Efrah", "Anna", "Julia Selyn-Stirling" };
             string[] char_background = {"Acolyte", "Guild Craftsman", "Artist", "Charlatan", "Criminal", "Hermit",
                                          "Outsider", "People's Hero", "Sailor", "Noble Orphan", "Wise Soldier"};
-            //int name;
-            //string sex;
+
             Random rand = new Random();
             int race = rand.Next(char_race.Length);
             int clas = rand.Next(char_class.Length);
             int bg = rand.Next(char_background.Length);
             int pers = rand.Next(char_personality.Length);
-            Console.WriteLine(gender + " is an " + char_race[race] + " of the " + char_class[clas] + " class \n" + char_background[bg]);
-
-            /*if (gender == "a")
+            int n_f = rand.Next(char_nameF.Length);
+            int n_m = rand.Next(char_nameM.Length);
+            string name = "";
+            if (gender == "f")
             {
-                 name = rand.Next(char_nameF.Length);
-                sex = char_nameF[name];
-                Console.WriteLine(sex + " is an " + char_race[race] + " of the " + char_class[clas] + " class \n" + char_background[bg]);
+                name = char_nameF[n_f];
             }
-            else if (gender == "b")
+            else if (gender == "m")
             {
-                 name = rand.Next(char_nameM.Length);
-                sex = char_nameM[name];
-                Console.WriteLine(sex + " is an " + char_race[race] + " of the " + char_class[clas] + " class \n" + char_background[bg]);
-            }*/
-            //int race = rand.Next(char_race.Length);
-            //int clas = rand.Next(char_class.Length);
-            //int bg = rand.Next(char_background.Length);
-            // int pers = rand.Next(char_personality.Length);
-            // Console.WriteLine(sex + " is an " + char_race[race] + " of the " + char_class[clas] + " class \n" + char_background[bg]);
+                name = char_nameM[n_m];  
+            }
+
+            Console.WriteLine("Name: " + name + "\nRace: " + char_race[race] + "\nClass: " + char_class[clas] + "\nBackground: " + char_background[bg] + "\n");
+            
         }
     }
 }
