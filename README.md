@@ -11,3 +11,6 @@ In this moment, this program includes includes:
 - A dice roller for Role Playing Games (RPG). It have all the dies from the d4 to d100 and a experimental option of a custom faced die.
 
 I'm writing this program in C# while I'm learning more about the language, so, may contain some errors but, I'm doing my best :)
+
+## Finally
+Well, I will set this project as conclude since I don't have itention to finish it. This is it, got to go :D
